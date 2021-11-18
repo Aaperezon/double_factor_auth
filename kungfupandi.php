@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="fondoHelado">
-    <h1>Bienvenido</h1>
+<div class="div-1">
+    <h1 style="color:black;">¡Lo has logrado!</h1>
+    <p style="color:white;">Accediste con la autenticación de dos factores</p>
+    <p style="color:black;">Integrantes de equipo</p>
+    <p style="color:white;">Andrea Espinosa Azuela</p>
+    <p style="color:white;">Aarón Perez Ontiveros</p>
+    <p style="color:white;">Ricardo Solis Zugarazo</p>
+    <p style="color:white;">Jesus García Hernandez</p>
+</div>
 </body>
 </html>

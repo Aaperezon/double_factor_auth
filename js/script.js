@@ -339,10 +339,8 @@ let load = () => {
                         text: 'Ha ocurrido un error',
                         confirmButtonText: 'Aceptar',
                       }).then((result) => {
-                        /* Read more about isConfirmed, isDenied below */
                         if (result.isConfirmed) {
-                            window.location = ".";
-                            Swal.fire('Hasta la próxima! No olvides registrarte', '', 'success')
+                            window.location = "."
                         } 
                       })
                     console.log("FAILED")
