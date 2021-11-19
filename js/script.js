@@ -120,13 +120,8 @@ let load = () => {
                         time_counter = 5
 
                     }
-<<<<<<< HEAD
-                    register_text.innerHTML = "Timer: "+time_counter
-                    timer_text.innerHTML = "Reading gesture: "+(condition_counter+1)
-=======
                     register_text.innerHTML = "Tiempo restante: "+time_counter
                     timer_text.innerHTML = "Leyendo gesto: "+(condition_counter+1)
->>>>>>> origin/Andrea
                 }, 1000)
                 double_FA = true
             }
@@ -154,13 +149,8 @@ let load = () => {
                         time_counter = 5
 
                     }
-<<<<<<< HEAD
-                    register_text.innerHTML = "Timer: "+time_counter
-                    timer_text.innerHTML = "Reading gesture: "+(condition_counter+1)
-=======
                     register_text.innerHTML = "Tiempo restante: "+time_counter
                     timer_text.innerHTML = "Leyendo gesto: "+(condition_counter+1)
->>>>>>> origin/Andrea
                 }, 1000)
                 double_FA = true
             }
@@ -210,27 +200,6 @@ let load = () => {
 
      });
 
-<<<<<<< HEAD
-
-    // function putText(){
-    //     canvasCtx.beginPath();
-    //     canvasCtx.fillStyle = "rgba(0, 100, 255, 0.7)";
-    //     canvasCtx.font = "30px Arial";
-    //     canvasCtx.fillText(condition_counter, 40, 40);
-    //     canvasCtx.stroke();
-
-    // }
-    // function putTimer(){
-    //     canvasCtx.beginPath();
-    //     canvasCtx.fillStyle = "rgba(0, 100, 255, 0.7)";
-    //     canvasCtx.font = "10px Arial";
-    //     canvasCtx.fillText("Se registrará el gesto en: "+time_counter, 40, 70);
-    //     canvasCtx.stroke();
-
-    // }
-
-=======
->>>>>>> origin/Andrea
     function markFinger(landmarks, finger){
         canvasCtx.beginPath();
         canvasCtx.fillStyle = "rgba(0, 255, 0, 1)";
@@ -315,11 +284,7 @@ let load = () => {
             response => response.json()
         ).then(
             response => {
-<<<<<<< HEAD
-                window.location = "./kungfupandi.php";
-=======
                 window.location = "./kungfupandi.html";
->>>>>>> origin/Andrea
 
 
             }
@@ -365,12 +330,6 @@ let load = () => {
                     }
                 }
                 if(accept == true){
-<<<<<<< HEAD
-                    window.location = "./kungfupandi.php";
-                    console.log("SUCCESS")
-                }else{
-                    window.location = ".";
-=======
                     window.location = "./kungfupandi.html";
                     console.log("SUCCESS")
                 }else{
@@ -384,7 +343,6 @@ let load = () => {
                             window.location = "."
                         } 
                       })
->>>>>>> origin/Andrea
                     console.log("FAILED")
                 }
               
