@@ -1,7 +1,11 @@
 <?php 
     $servername = "localhost";
     $username = "root";
+<<<<<<< HEAD
     $password = "root";
+=======
+    $password = "";
+>>>>>>> origin/Andrea
     $dbname = "double_factor_auth";
 
     try {

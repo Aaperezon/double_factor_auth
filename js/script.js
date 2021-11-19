@@ -120,8 +120,13 @@ let load = () => {
                         time_counter = 5
 
                     }
+<<<<<<< HEAD
                     register_text.innerHTML = "Timer: "+time_counter
                     timer_text.innerHTML = "Reading gesture: "+(condition_counter+1)
+=======
+                    register_text.innerHTML = "Tiempo restante: "+time_counter
+                    timer_text.innerHTML = "Leyendo gesto: "+(condition_counter+1)
+>>>>>>> origin/Andrea
                 }, 1000)
                 double_FA = true
             }
@@ -149,8 +154,13 @@ let load = () => {
                         time_counter = 5
 
                     }
+<<<<<<< HEAD
                     register_text.innerHTML = "Timer: "+time_counter
                     timer_text.innerHTML = "Reading gesture: "+(condition_counter+1)
+=======
+                    register_text.innerHTML = "Tiempo restante: "+time_counter
+                    timer_text.innerHTML = "Leyendo gesto: "+(condition_counter+1)
+>>>>>>> origin/Andrea
                 }, 1000)
                 double_FA = true
             }
@@ -200,6 +210,7 @@ let load = () => {
 
      });
 
+<<<<<<< HEAD
 
     // function putText(){
     //     canvasCtx.beginPath();
@@ -218,6 +229,8 @@ let load = () => {
 
     // }
 
+=======
+>>>>>>> origin/Andrea
     function markFinger(landmarks, finger){
         canvasCtx.beginPath();
         canvasCtx.fillStyle = "rgba(0, 255, 0, 1)";
@@ -302,7 +315,11 @@ let load = () => {
             response => response.json()
         ).then(
             response => {
+<<<<<<< HEAD
                 window.location = "./kungfupandi.php";
+=======
+                window.location = "./kungfupandi.html";
+>>>>>>> origin/Andrea
 
 
             }
@@ -348,10 +365,26 @@ let load = () => {
                     }
                 }
                 if(accept == true){
+<<<<<<< HEAD
                     window.location = "./kungfupandi.php";
                     console.log("SUCCESS")
                 }else{
                     window.location = ".";
+=======
+                    window.location = "./kungfupandi.html";
+                    console.log("SUCCESS")
+                }else{
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'Ha ocurrido un error',
+                        confirmButtonText: 'Aceptar',
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location = "."
+                        } 
+                      })
+>>>>>>> origin/Andrea
                     console.log("FAILED")
                 }
               

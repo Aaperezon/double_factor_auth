@@ -12,6 +12,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
+=======
+.fondoHelado {
+  background-image: url("img/fondo1.jpg");
+  background-color: transparent;
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  z-index: -1;
+}
+
+>>>>>>> origin/Andrea
 .form-structor {
   background-color: #222;
   border-radius: 15px;
@@ -204,6 +216,21 @@ body {
   visibility: visible;
   -webkit-transition: all 0.3s ease;
 }
+<<<<<<< HEAD
+=======
+.div-1 {
+  border-radius: 50px;
+  text-align: center;
+  border: 2px solid #ffffff;
+  background-color:#3B83BD;
+  /*background: url(img/fondo1.jpg);*/
+  background-position: left top;
+  background-repeat: repeat;
+  padding: 20px;
+  width: 500px;
+  height: 300px; 
+}
+>>>>>>> origin/Andrea
 .form-structor .login .center .submit-btn:hover {
   transition: all 0.3s ease;
   background-color: rgba(0, 0, 0, 0.8);
