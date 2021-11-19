@@ -284,7 +284,7 @@ let load = () => {
             response => response.json()
         ).then(
             response => {
-                window.location = "./kungfupandi.php";
+                window.location = "./kungfupandi.html";
 
 
             }
@@ -330,7 +330,7 @@ let load = () => {
                     }
                 }
                 if(accept == true){
-                    window.location = "./kungfupandi.php";
+                    window.location = "./kungfupandi.html";
                     console.log("SUCCESS")
                 }else{
                     Swal.fire({
