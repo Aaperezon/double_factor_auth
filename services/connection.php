@@ -1,8 +1,8 @@
 <?php 
-    $servername = "localhost";
-    $username = "root";
-    $password = "root";
-    $dbname = "double_factor_auth";
+    $servername = "185.156.219.144";
+    $username = "s154717_aaron";
+    $password = "Aaron1#{}";
+    $dbname = "s154717_double_factor_auth";
 
     try {
         $pdo = new PDO('mysql:host='.$servername.';dbname='.$dbname, $username, $password);

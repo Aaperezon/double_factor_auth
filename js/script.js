@@ -286,7 +286,6 @@ let load = () => {
             response => {
                 window.location = "./kungfupandi.html";
 
-
             }
         ).catch(
             error => console.log(error)
@@ -342,7 +341,7 @@ let load = () => {
                         if (result.isConfirmed) {
                             window.location = "."
                         } 
-                      })
+                    })
                     console.log("FAILED")
                 }
               
@@ -350,7 +349,20 @@ let load = () => {
 
             }
         ).catch(
-            error => console.log(error)
+            error => {
+                console.log("error")
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Ha ocurrido un error',
+                    confirmButtonText: 'Aceptar',
+                  }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location = "."
+                    } 
+                })
+            
+            }
         )
 
 
