@@ -88,7 +88,7 @@
 			<video class="input_video" hidden></video>
 			<canvas class="output_canvas" width="450%" height="300%"></canvas>
 			<div class="alignCenter">
-				<div id="register_text">Timer: 3</div>
+				<div id="register_text">Timer: 5</div>
 				<div id="timer_text">Reading gesture: 1</div>
 
 			</div>

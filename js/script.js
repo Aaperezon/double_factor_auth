@@ -53,7 +53,7 @@ let load = () => {
     const videoElement = document.getElementsByClassName('input_video')[0];
     const canvasElement = document.getElementsByClassName('output_canvas')[0];
     const canvasCtx = canvasElement.getContext("2d");
-    var time_counter=3
+    var time_counter=5
     const register_text = document.getElementById("register_text");
     const timer_text = document.getElementById("timer_text");
 
@@ -97,7 +97,7 @@ let load = () => {
 			await hands.send({image: videoElement});
 
             if(double_FA == false && button_type == "register"){
-                var timer = 3
+                var timer = 5
                 var this_interval = setInterval(() => {
                     if(timer > 0)
                     {
@@ -116,8 +116,8 @@ let load = () => {
                         }
                     }
                     else {	// Acciones cuando el tiempo acabe
-                        timer = 3	// Reiniciar el contador
-                        time_counter = 3
+                        timer = 5	// Reiniciar el contador
+                        time_counter = 5
 
                     }
                     register_text.innerHTML = "Timer: "+time_counter
@@ -126,7 +126,7 @@ let load = () => {
                 double_FA = true
             }
             else if (double_FA == false && button_type=="login"){
-                var timer = 3
+                var timer = 5
                 var this_interval = setInterval(() => {
                     if(timer > 0)
                     {
@@ -145,8 +145,8 @@ let load = () => {
                         }
                     }
                     else {	// Acciones cuando el tiempo acabe
-                        timer = 3	// Reiniciar el contador
-                        time_counter = 3
+                        timer = 5	// Reiniciar el contador
+                        time_counter = 5
 
                     }
                     register_text.innerHTML = "Timer: "+time_counter
