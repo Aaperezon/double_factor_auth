@@ -1,5 +1,5 @@
 let load = () => {
-    var button_type
+    var button_type = ""
     var form1 = document.getElementById("register_form1")
     function handleForm1(event) {
         event.preventDefault()
@@ -98,7 +98,7 @@ let load = () => {
 
             if(double_FA == false && button_type == "register"){
                 var timer = 5
-                var this_interval = setInterval(() => {
+                let this_interval = setInterval(() => {
                     if(timer > 0)
                     {
                         timer -= 1
@@ -127,7 +127,7 @@ let load = () => {
             }
             else if (double_FA == false && button_type=="login"){
                 var timer = 5
-                var this_interval = setInterval(() => {
+                let this_interval = setInterval(() => {
                     if(timer > 0)
                     {
                         timer -= 1
@@ -185,21 +185,6 @@ let load = () => {
         clearInterval()
     }
 
-
-    document.addEventListener("keydown", event => {
-        if(event.code == 'KeyR'){
-            // clearInterval()
-            // setInterval(register, 2000)
-            register()
-        }
-        if(event.code == 'KeyC'){
-            // clearInterval()
-            setInterval(doneLogIn, 300)
-        }
-
-
-     });
-
     function markFinger(landmarks, finger){
         canvasCtx.beginPath();
         canvasCtx.fillStyle = "rgba(0, 255, 0, 1)";
@@ -231,9 +216,10 @@ let load = () => {
     }
     function validateGesture(group_condition){
         // console.log(typeof(distance_between[0]) + "  " + typeof(condition[0]))
+        // console.log(typeof(group_condition) + "  " + group_condition[0])
         var accept = true
         for(i = 0;i < 3; i++){
-            if(!validate(distance_between[i]/distance_between[i+1], group_condition[condition_counter][i]) ){
+            if(!validate((distance_between[i]/distance_between[i+1]), Number(group_condition[0][i])) ){
                 accept = false
             }
         }
@@ -242,12 +228,13 @@ let load = () => {
         }
         return accept
     }
+
+
     function validate(input_try, condition_input){
-        let tolerance = .5
+        let tolerance = 1
         // console.log(typeof(input_try) + "  " + typeof(condition_input))
-        // console.log(input_try+"<"+(condition_input + tolerance))
-        // console.log(input_try+">"+(condition_input - tolerance))
-        if(input_try < condition_input + tolerance && input_try > condition_input - tolerance){
+        // console.log(input_try+"<"+Number(condition_input + tolerance)+"    "+input_try+">"+Number(condition_input - tolerance))
+        if(input_try < Number(condition_input + tolerance) && input_try > Number(condition_input - tolerance)){
             return true
         }else{
             return false
@@ -316,10 +303,13 @@ let load = () => {
             response => {
                 var accept = true
                 condition_counter = 0
-                for(i = 0; i<3;i++){
-                    console.log("'"+response[i]+"'")
+                var check_condition = [[],[]]
+                for(i = 0; i < 3; i++){
+                    // console.log("'"+response[i]+"'")
+                }
+                for(i = 0; i < 3; i++){
+                    // console.log(i)
                     var original_condition = JSON.parse(response[i]);
-                    var check_condition = [[],[]]
                     check_condition[i][0] = original_condition['first']
                     check_condition[i][1] = original_condition['second']
                     check_condition[i][2] = original_condition['third']
@@ -354,7 +344,7 @@ let load = () => {
                 Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Ha ocurrido un error',
+                    text: 'ERROR',
                     confirmButtonText: 'Aceptar',
                   }).then((result) => {
                     if (result.isConfirmed) {
