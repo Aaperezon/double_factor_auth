@@ -164,6 +164,8 @@ let load = () => {
 
 
     authBtn.onclick = () =>{
+        condition = [[],[],[]]
+        distance_between = []
         camera.start();
         double_FA = false
         button_type = "register"
@@ -172,6 +174,8 @@ let load = () => {
     }
 
     loginValidate.onclick = () =>{
+        condition = [[],[],[]]
+        distance_between = []
         camera.start();
         double_FA = false
         button_type = "login"
@@ -199,7 +203,7 @@ let load = () => {
             condition[condition_counter][i] = distance_between[i]/distance_between[i+1]
         }
         condition_counter+=1
-        console.log("Registrado: "+condition_counter)
+        // console.log("Registrado: "+condition_counter +"  " +condition[condition_counter-1])
     }
 
 
@@ -219,7 +223,7 @@ let load = () => {
         // console.log(typeof(group_condition) + "  " + group_condition[0])
         var accept = true
         for(i = 0;i < 3; i++){
-            if(!validate((distance_between[i]/distance_between[i+1]), Number(group_condition[0][i])) ){
+            if(!validate(condition[condition_counter][i], Number(group_condition[0][i])) ){
                 accept = false
             }
         }
@@ -231,8 +235,8 @@ let load = () => {
 
 
     function validate(input_try, condition_input){
-        let tolerance = 1
-        // console.log(typeof(input_try) + "  " + typeof(condition_input))
+        let tolerance = .6
+        //console.log(typeof(input_try) + "  " + typeof(condition_input))
         // console.log(input_try+"<"+Number(condition_input + tolerance)+"    "+input_try+">"+Number(condition_input - tolerance))
         if(input_try < Number(condition_input + tolerance) && input_try > Number(condition_input - tolerance)){
             return true
