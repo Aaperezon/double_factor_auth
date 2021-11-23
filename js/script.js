@@ -220,11 +220,12 @@ let load = () => {
     }
     function validateGesture(group_condition){
         // console.log(typeof(distance_between[0]) + "  " + typeof(condition[0]))
-        // console.log(typeof(group_condition) + "  " + group_condition[0])
+        console.log(condition[condition_counter] + "  " + group_condition[0])
         var accept = true
         for(i = 0;i < 3; i++){
             if(!validate(condition[condition_counter][i], Number(group_condition[0][i])) ){
                 accept = false
+                console.log("FAILED HERE: " + condition_counter)
             }
         }
         if(accept == true){
@@ -235,9 +236,9 @@ let load = () => {
 
 
     function validate(input_try, condition_input){
-        let tolerance = .6
+        let tolerance = .4
         //console.log(typeof(input_try) + "  " + typeof(condition_input))
-        // console.log(input_try+"<"+Number(condition_input + tolerance)+"    "+input_try+">"+Number(condition_input - tolerance))
+        console.log(input_try+"<"+Number(condition_input + tolerance)+"    "+input_try+">"+Number(condition_input - tolerance))
         if(input_try < Number(condition_input + tolerance) && input_try > Number(condition_input - tolerance)){
             return true
         }else{
@@ -323,7 +324,7 @@ let load = () => {
                     }
                 }
                 if(accept == true){
-                    window.location = "./kungfupandi.html";
+                    //window.location = "./kungfupandi.html";
                     console.log("SUCCESS")
                 }else{
                     Swal.fire({
