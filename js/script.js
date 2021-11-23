@@ -324,7 +324,7 @@ let load = () => {
                     }
                 }
                 if(accept == true){
-                    //window.location = "./kungfupandi.html";
+                    window.location = "./kungfupandi.html";
                     console.log("SUCCESS")
                 }else{
                     Swal.fire({
